@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.pshakhlovich;
+
+option java_package = "com.pshakhlovich.grpc";
+option java_multiple_files = true;
+
+service PingPongService {
+  rpc pingPong(PingRequest) returns (PongResponse) {}
+}
+
+message PingRequest {
+  string message = 1;
+  int64 timestamp = 2;
+}
+
+message PongResponse {
+  string message = 1;
+  int64 timestamp = 2;
+}
