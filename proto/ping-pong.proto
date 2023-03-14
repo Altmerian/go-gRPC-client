@@ -1,12 +1,13 @@
 syntax = "proto3";
 
-package com.pshakhlovich;
+package proto;
 
+option go_package = "example.com/go-gRPC-client/proto";
 option java_package = "com.pshakhlovich.grpc";
 option java_multiple_files = true;
 
 service PingPongService {
-  rpc pingPong(PingRequest) returns (PongResponse) {}
+  rpc PingPong(PingRequest) returns (PongResponse) {}
 }
 
 message PingRequest {
